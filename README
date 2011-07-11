@@ -1,0 +1,5 @@
+DeadComicker is a dead simple webcomic management system.
+
+Requires:
+* Grappelli
+* Filebrowser (and PIL)

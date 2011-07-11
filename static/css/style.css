@@ -81,10 +81,31 @@ a:hover { color: #036; }
 	July 10, 2011
 */
 
+#container {
+	width: 800px;
+	margin: auto;
+}
 
+header {
+	padding: 10px 0 30px 0;
+}
 
+header h1 {
+	font-size: 3.5em;
+}
 
+#main h2 {
+	font-size: 2em;
+}
 
+#main article {
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+footer {
+	padding: 30px 0;
+}
 
 
 

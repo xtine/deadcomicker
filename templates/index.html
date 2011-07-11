@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+                {% block content %}
+                    {% for comic in comics %}
+                        <article>
+                            <h2>{{comic.title}}</h2>
+                            <img src="/media/{{comic.image}}" />
+                            <p>{{comic.entry}}</p>
+                        </article>
+                    {% endfor %}
+                {% endblock %}

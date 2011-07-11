@@ -3,7 +3,7 @@
                     {% for comic in comics %}
                         <article>
                             <h2>{{comic.title}}</h2>
-                            <img src="/media/{{comic.image}}" />
+                            {% if comic.image %}<img src="/media/{{comic.image}}" />{% endif %}
                             <p>{{comic.entry}}</p>
                         </article>
                     {% endfor %}

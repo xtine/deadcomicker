@@ -5,3 +5,4 @@ __init__*
 settings.py
 manage.py
 *.db
+media/*

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+    {% block title %}archive{% endblock title %}
+                {% block content %}
+                    <section id="archive">
+                        <ol>
+                            {% for comic in comics %}
+                                <li><a href="/comic/{{comic.id}}">{{comic.title}}</a></li>
+                            {% endfor %}
+                        </ol>
+                    </section>
+                {% endblock %}

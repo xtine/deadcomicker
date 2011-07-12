@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+    {% block title %}{{comic.title}}{% endblock title %}
+                {% block content %}
+                    <section id="comic">
+                        <h2>{{comic.title}}</h2>
+                        
+                        <ul class="comicNavLinks">
+                        {% if comic.id != 1 %}
+                            <li><a href="/comic/1">first</a></li>
+                            <li><a href="/comic/{{nav.prev}}">prev</a></li>
+                        {% endif %}
+                            <li><a href="/comic/random">random</a></li>
+                        {% if nav.next %}
+                            <li><a href="/comic/{{nav.next}}">next</a></li>
+                        {% endif %}
+                        {% if nav.last %}
+                            <li><a href="/comic/{{nav.last}}">last</a></li>
+                        {% endif %}
+                        </ul>
+                        
+                        {% if comic.image %}<img src="/media/{{comic.image}}" />{% endif %}
+                        
+                        <ul class="comicNavLinks">
+                        {% if comic.id != 1 %}
+                            <li><a href="/comic/1">first</a></li>
+                            <li><a href="/comic/{{nav.prev}}">prev</a></li>
+                        {% endif %}
+                            <li><a href="/comic/random">random</a></li>
+                        {% if nav.next %}
+                            <li><a href="/comic/{{nav.next}}">next</a></li>
+                        {% endif %}
+                        {% if nav.last %}
+                            <li><a href="/comic/{{nav.last}}">last</a></li>
+                        {% endif %}
+                        </ul>
+                        
+                        {% if comic.entry %}
+                        <div class="entry">
+                            {{comic.entry|safe}}
+                        </div>
+                        {% endif %}
+                    </section>
+                {% endblock %}

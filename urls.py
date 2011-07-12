@@ -5,7 +5,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^admin/filebrowser/', include('filebrowser.urls')),
+    (r'^comic/random/', 'comics.views.random_comic'),
+    (r'^comic/(?P<comic_id>\d+)/', 'comics.views.comic'),
+    (r'^archive/', 'comics.views.archive'),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),    
     (r'^grappelli/', include('grappelli.urls')),
